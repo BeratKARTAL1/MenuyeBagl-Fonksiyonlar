@@ -1,1 +1,1 @@
-# MenuyeBaglıFonksiyonlar
+# FUNCTIONS
