@@ -1,33 +1,33 @@
 #include <stdio.h>
 void MENU();
-int enK(int a,int b);
-int enB(int a,int b);
+int min(int a,int b);
+int max(int a,int b);
 int dorduncuKuvvet(int a);
-int mutlak(int a);
+int fab(int a);
 int main() {
     int secim;
     int a=0,b=0;
     MENU();
-    printf("lutfen 1-4 arasinda bir sayi seciniz:");
+    printf("Please choose a number between 1 and 4:");
     scanf("%d",&secim);
     switch (secim) {
         case 1:
-            printf("iki sayi gir:\n");
+            printf("enter two numbers:\n");
             scanf("%d %d",&a,&b);
-            printf("kucuk deger:%d",enK(a,b));
+            printf("min:%d",min(a,b));
             break;
-        case 2:printf("iki sayi gir:\n");
+        case 2:printf("enter two numbers:\n");
             scanf("%d %d",&a,&b);
-            printf("buyuk deger:%d",enB(a,b));
+            printf("max:%d",max(a,b));
             break;
         case 3:
-            printf("sayi gir:\n");
+            printf("enter number:\n");
             scanf("%d",&a);
-            printf("sonuc:%d",dorduncuKuvvet(a)); break;
+            printf("conclusion:%d",dorduncuKuvvet(a)); break;
         case 4:
-            printf("sayi gir:\n");
+            printf("enter:\n");
             scanf("%d",&a);
-            printf("mutlak deger:%d",mutlak(a)); break;
+            printf("fab:%d",fab(a)); break;
         default:
             printf("ERROR!");
     }
@@ -36,19 +36,19 @@ int main() {
 
 void MENU() {
     ////MENU İÇERİĞİ///
-    printf("1-en kucuk degeri bulma\n");
-    printf("2-en buyuk degeri bulma\n");
-    printf("3-dorduncu kuvvet bulma\n");
-    printf("4-mutlak deger bulma\n");
+    printf("1-min\n");
+    printf("2-max\n");
+    printf("3-multiply four times\n");
+    printf("4-fab\n");
 }
-int enK(int a,int b) {
+int min(int a,int b) {
     if (b>a) {
         return a;
     }
     else
         return b;
 }
-int enB(int a,int b) {
+int max(int a,int b) {
     if (b>a) {
         return b;
     }
@@ -58,7 +58,7 @@ int enB(int a,int b) {
 int dorduncuKuvvet (int a) {
     return a*a*a*a;
 }
-int mutlak(int a) {
+int fab(int a) {
     if (a<0) {
         return a*(-1);
     }else return a;
